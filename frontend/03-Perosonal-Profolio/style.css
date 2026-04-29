@@ -1,0 +1,112 @@
+header {
+    background-color: #292929;
+    color: #ffffff;
+        padding: 13px;
+        border-radius: 10px;
+}
+
+body {
+    background-color: #1d1d1d;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+body .container {
+    text-align: center;
+    margin-top: 20px;
+  font-family: 'Playwrite DE SAS';
+  font-style: normal;
+  font-weight: 100 400;
+  font-display: swap;
+  border-bottom: 1px solid #aeaeae;
+  height: 500px;
+  justify-content: center;
+}
+
+.navi {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    top: 39px;
+    right: 30px;
+    font-size: 20px;
+  font-weight: 100 400;
+  font-display: swap;
+}
+
+.navi a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 35px;
+}
+.navi a:hover {
+    color: rgb(255, 255, 255);
+    display:inline;
+    background-color: #000000;
+}
+.project {
+    background-color: #292929;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 20%;
+}
+.about {
+    background-color: #292929;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 20%;
+}
+.work {
+    background-color: #292929;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 20%;
+}
+.edu {
+    background-color: #292929;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 20%;
+}
+.work h2 {
+      font-family: 'Playwrite DE SAS';
+  font-style: normal;
+  font-weight: 100 400;
+  font-display: swap;
+}
+
+.about h2 {
+      font-family: 'Playwrite DE SAS';
+  font-style: normal;
+  font-weight: 100 400;
+  font-display: swap;
+}
+
+.project h2 {
+      font-family: 'Playwrite DE SAS';
+  font-style: normal;
+  font-weight: 100 400;
+  font-display: swap;
+}
+
+.edu h2 {
+      font-family: 'Playwrite DE SAS';
+  font-style: normal;
+  font-weight: 100 400;
+  font-display: swap;
+}
+footer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
