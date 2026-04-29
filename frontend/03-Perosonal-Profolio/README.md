@@ -17,6 +17,4 @@ For bonus points, you can:
 
 - [x] Use Google Fonts to enhance the typography of your website.
 
-- [X] Look into GitHub Pages or Cloudflare Pages to host your website for free.
 
-- [X] Add support for dark mode using CSS variables.
