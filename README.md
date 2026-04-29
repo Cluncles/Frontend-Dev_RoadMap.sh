@@ -5,7 +5,3 @@ https://roadmap.sh/projects/single-page-cv
 
 ##Basic HTML Website
 https://roadmap.sh/projects/basic-html-website
-
-<div>
-  <img src="/frontend/03-Personal-Profolio/Screenshot.png">
-</div>
