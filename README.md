@@ -1,13 +1,16 @@
 # Frontend-Developer Roadmap.sh Projects
 
-##Single-Page-CV
+- [x] Single-Page-CV
 https://roadmap.sh/projects/single-page-cv
 
-##Basic HTML Website
+- [x] Basic HTML Website
 https://roadmap.sh/projects/basic-html-website
 
-##Personal Profolio
+- [x] Personal Profolio
 https://roadmap.sh/projects/portfolio-website
 
-##Changelog Component
+- [x] Changelog Component
 https://roadmap.sh/projects/changelog-component
+
+- [x] Testimonial Cards
+https://roadmap.sh/projects/testimonial-cards
