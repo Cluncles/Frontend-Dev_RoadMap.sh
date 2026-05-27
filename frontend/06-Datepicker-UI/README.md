@@ -1,5 +1,5 @@
 # Datepicker UI
 
-![screenshot.png](Datepicker)
+![./screenshot.png](Datepicker)
 
 https://roadmap.sh/projects/datepicker-ui
