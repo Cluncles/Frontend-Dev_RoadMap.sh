@@ -1,4 +1,4 @@
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c0a2d283-fa21-4e12-8ed5-22035da02503" /># Frontend-Developer Roadmap.sh Projects
+Frontend-Developer Roadmap.sh Projects
 
 - [x] Single-Page-CV
 https://roadmap.sh/projects/single-page-cv
