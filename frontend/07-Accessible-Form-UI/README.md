@@ -1,3 +1,3 @@
-#Accessible Form UI
+#
 
-!(./screenshot)[AccessibleUI]
+![Accessible Form UI](./screenshot.png)
