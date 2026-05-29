@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Accessible Form UI</title>
+</head>
+<body>
+    <form class="uptForm" >
+        <div class="uptContainer" role="form" aria-label="User profile update">
+            <div class="uptFormContent">
+                <!--uptentication form container-->
+                <div class="uptInput" id="fullName">
+                    <label class="uptLabel" for="fullNameInput">Full Name</label>
+                    <input id="fullNameInput" type="text" placeholder="What should we call you?" required aria-required="true">
+                </div>
+
+                <div class="uptInput" id="email">
+                    <label class="uptLabel" id="emailLabel">Email</label>
+                    <input id="errorInput" type="email" placeholder="Enter your email" required aria-required="true" aria-invalid="true" aria-describedby="emailError">
+                    <label class="errorLabel" id="emailError" role="alert">Email is already taken.</label>
+                </div>
+
+                <div class="uptInput" id="password">
+                    <label class="uptLabel" for="passwordInput">Password</label>
+                    <div class="passwordField">
+                        <input id="passwordInput" type="password" placeholder="Create a password" required aria-required="true">
+                        <button class="passwordToggle" type="button" data-target="passwordInput" data-status="passwordStatus" data-label="password" aria-label="Show password" aria-pressed="false" aria-controls="passwordInput"></button>
+                        <span class="sr-only" id="passwordStatus" aria-live="polite">Password is hidden.</span>
+                    </div>
+                </div>
+
+                <div class="uptInput" id="confirmPassword">
+                    <label class="uptLabel" for="confirmPasswordInput">Confirm Password</label>
+                    <div class="passwordField">
+                        <input id="confirmPasswordInput" type="password" placeholder="Confirm your password" required aria-required="true">
+                        <button class="passwordToggle" type="button" data-target="confirmPasswordInput" data-status="confirmPasswordStatus" data-label="confirm password" aria-label="Show confirm password" aria-pressed="false" aria-controls="confirmPasswordInput"></button>
+                        <span class="sr-only" id="confirmPasswordStatus" aria-live="polite">Confirm password is hidden.</span>
+                    </div>
+                </div>
+
+                <div class="uptBtnContainer">
+                    <button class="uptBtn" type="submit">Update Profile</button>
+                </div>
+            </div>
+
+            <div class="uptSidebar" aria-hidden="true">
+            <div class="uptBar" aria-label="Profile progress indicator">
+                <svg viewBox="0 0 120 120" aria-hidden="true">
+                    <circle cx="60" cy="60" r="30" />
+                    <circle class="progress-bar" cx="60" cy="60" r="30" />
+                </svg>
+                <label class="uptProgressLabel" id="progressLabel">65%</label>
+                            <label class="uptSidebarLabel" id="sidebarLabel">Profile Completeness</label>
+            </div>
+            <div class="uptChecklist">
+                <ul class="uptChecklistList">
+                    <li class="uptChecklistItem"><del>Create Account</del></li>
+                    <li class="uptChecklistItem"><del>Update Roadmap Progress</del></li>
+                    <li class="uptChecklistItem">Complete your first Project</li>
+                    <li class="uptChecklistItem">Invite your Friends</li>
+                </ul>
+            </div>
+            </div>
+            <!-- End uptentication form container-->
+        </div>
+    </form>
+    <script>
+        const passwordToggles = document.querySelectorAll('.passwordToggle');
+        const lockIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5S7 4.243 7 7v3H6c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-8zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9V7z"/></svg>';
+        const unlockIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8V7c0-2.757-2.243-5-5-5S7 4.243 7 7v3H6c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-8c0-1.103-.897-2-2-2H9V7c0-1.654 1.346-3 3-3s3 1.346 3 3v1h2z"/></svg>';
+
+        passwordToggles.forEach((button) => {
+            button.innerHTML = lockIcon;
+
+            button.addEventListener('click', () => {
+                const input = document.getElementById(button.dataset.target);
+                const status = document.getElementById(button.dataset.status);
+                const label = button.dataset.label || 'password';
+                const isHidden = input.type === 'password';
+
+                input.type = isHidden ? 'text' : 'password';
+                button.innerHTML = isHidden ? unlockIcon : lockIcon;
+                button.setAttribute('aria-pressed', String(isHidden));
+                button.setAttribute('aria-label', isHidden ? `Hide ${label}` : `Show ${label}`);
+
+                if (status) {
+                    status.textContent = isHidden
+                        ? `${label.charAt(0).toUpperCase() + label.slice(1)} is visible.`
+                        : `${label.charAt(0).toUpperCase() + label.slice(1)} is hidden.`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
