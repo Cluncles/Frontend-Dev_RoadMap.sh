@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+}
+
+.profile-rounded {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.profile-rounded-faded {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 50%;
+
+}
+
+.profile-square {
+    width: 237px;
+    height: 237px;
+    border-radius: 10%;
+}
+
+.testimonial-profile-bubble {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.testimonial-profile-outline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.testimonial-profile-info {
+    margin-left: 10px;
+}
+.testimonial-profile-info p {
+    font-size: small;
+    font-family: monospace;
+
+}
+
+.testimonial-profile-info-rating {
+    font-size: 30px;
+}
+.testimonial-profile-info-rating p {
+    color: gray;
+    font-size: large;
+    font-family: monospace;
+
+}
+
+/* Testimonial Bubble */
+.testimonial-comment-bubble {
+    position: relative;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.testimonial-comment-bubble::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: rgb(24, 24, 24) transparent;
+    border-width: 20px 19px 0;
+    bottom: -20px;
+    left: 13%;
+    margin-left: -19px;
+}
+
+
+
+.testimonial-content-bubble {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* Testimonial Outline */
+
+.testimonial-content-outline {
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Testimonial Rating */
+.testimonial-content-rating {
+    display: flex;
+    flex-direction: row;
+        gap: 10px;
+}
+
+.testimonial-comment-rating {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+/* Testimonial Slider*/
+
+.testimonial-content-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px;
+    width: 500px;
+    height: 200px;
+
+}
+
+.testimonial-profile-info-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
