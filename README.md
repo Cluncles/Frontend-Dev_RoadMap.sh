@@ -20,3 +20,6 @@ https://roadmap.sh/projects/datepicker-ui
 
 - [x] Accessible Form UI
 https://roadmap.sh/projects/accessible-form-ui
+
+- [x] Image Grid Layout
+https://roadmap.sh/projects/image-grid  
