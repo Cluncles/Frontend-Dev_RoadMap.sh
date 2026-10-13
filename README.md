@@ -26,3 +26,6 @@ https://roadmap.sh/projects/image-grid
 
 - [x] Tooltip UI
 https://roadmap.sh/projects/tooltip-ui
+
+- [x] Tabs
+https://roadmap.sh/projects/simple-tabs
